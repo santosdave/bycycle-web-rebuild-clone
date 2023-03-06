@@ -51,4 +51,225 @@
   img {
     max-width: 100%;
   }
+
+  header {
+    height: var(--header-height);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--header-padding);
+    z-index: 99;
+    transition: height 0.3s ease 0s, background-color 0.3s ease 0s;
+  }
+
+  header.shrink {
+    height: 60px;
+    background-color: var(--second-color);
+  }
+
+  .main-menu-wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .main-menu {
+    display: flex;
+    pointer-events: visible;
+  }
+
+  .main-menu>li>a {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: var(--txt-color);
+  }
+
+  .main-menu>li>a.active {
+    color: var(--txt-white);
+  }
+
+  .main-menu>li~li {
+    margin-left: 84px;
+  }
+
+  .main-menu>li>a:hover,
+  .user-menu>li>a:hover {
+    color: var(--txt-white);
+  }
+
+  .user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .user-menu>li~li {
+    margin-left: 20px;
+  }
+
+
+
+
+  .hero {
+    height: 100vh;
+    padding-top: var(--header-height);
+    position: relative;
+  }
+
+  .slide-container {
+    height: 100%;
+    position: relative;
+  }
+
+  .slide {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .slide.active {
+    height: 100%;
+  }
+
+  .slide-img {
+    width: 58%;
+    padding-right: 60px;
+    padding-top: 80px;
+    z-index: 1;
+  }
+
+  .slide-img img {
+    width: 100%;
+    transform: rotate(-70deg);
+    transform-origin: bottom;
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      opacity 0.6s ease 0s;
+  }
+
+  .slide.active .slide-img img {
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  .slide-txt {
+    width: 42%;
+    padding-left: 60px;
+  }
+
+  .slide-title {
+    width: max-content;
+  }
+
+  .slide-title>h3 {
+    font-size: 13.5rem;
+    font-family: BerlinSansFBDemiBold;
+    color: var(--txt-white);
+    text-transform: capitalize;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 4px;
+    transform: translateX(-200px);
+    transition: transform 0.5s ease 0s;
+  }
+
+  .slide.active .slide-title>h3 {
+    transform: translateX(0);
+  }
+
+  .slide-description {
+    margin-top: 84px;
+  }
+
+  .slide-btn {
+    margin-top: 42px;
+  }
+
+  .slide-description>p {
+    font-size: 1.4rem;
+    transition-delay: 0.3s;
+  }
+
+  .hero-btn {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    background-color: var(--txt-white);
+    color: var(--main-color);
+    transition: transform 0.3s ease 0s;
+  }
+
+  .slide-description>p,
+  .slide-btn {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+  }
+
+  .slide.active .slide-description>p,
+  .slide.active .slide-btn {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .slide-btn {
+    transition-delay: 0.6s;
+  }
+
+  .hero-btn:hover {
+    transform: translateY(-10px);
+  }
+
+  .hero-txt {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: BerlinSansFBDemiBold;
+    font-size: 11.75rem;
+    top: 203px;
+    right: -182px;
+    color: var(--second-color);
+    transform: rotate(-90deg);
+  }
+
+  .slide-control {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 98;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slide-control>li {
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease 0s;
+  }
+
+  .slide-control>li.active {
+    transform: scale(1.5);
+    color: var(--txt-white);
+  }
+
+  .slide-control>li~li {
+    margin-left: 30px;
+  }
+
+  .slide-control>li:hover {
+    color: var(--txt-white);
+  }
+
 }

@@ -3,6 +3,12 @@ import Header from '@/components/Header'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
+import CategorySection from '@/components/CategorySection'
+import NewArrivalsSection from '@/components/NewArrivalsSection'
+import SpecialBike from '@/components/SpecialBike'
+import PopularSection from '@/components/PopularSection'
+import BlogSection from '@/components/BlogSection'
+import Footer from '@/components/Footer'
 
 
 
@@ -128,7 +134,7 @@ export default function Home() {
       className=""
     >
       <Head>
-        <title>Dave's Bikes</title>
+        <title>Dave's Bikes - KE</title>
         <meta
           name="description"
           content="Bikes E-commerce store landing page"
@@ -137,6 +143,12 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
+      <CategorySection/>
+      <NewArrivalsSection/>
+      <SpecialBike/>
+      <PopularSection/>
+      <BlogSection/>
+      <Footer/>
     </motion.div>
   )
 }

@@ -134,7 +134,7 @@ export default function Home() {
       className=""
     >
       <Head>
-        <title>Dave's Bikes - KE</title>
+        <title>Daves Bikes - KE</title>
         <meta
           name="description"
           content="Bikes E-commerce store landing page"

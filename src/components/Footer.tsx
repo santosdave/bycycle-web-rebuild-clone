@@ -17,7 +17,7 @@ export default function Footer({ }: Props) {
                                     letterSpacing: "2px",
                                 }}
                             >
-                                Dave's Bikes
+                                Daves Bikes
                             </h1>
                         </a>
                         <p className="footer-description">

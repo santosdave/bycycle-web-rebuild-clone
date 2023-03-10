@@ -16,7 +16,7 @@ export default function Header({ }: Props) {
                     <h1
                         style={{ fontSize: "3rem", fontWeight: "900", letterSpacing: "2px" }}
                     >
-                        Dave's Bikes
+                        Daves Bikes
                     </h1>
                 </a>
                 <div className='main-menu-wrapper'>

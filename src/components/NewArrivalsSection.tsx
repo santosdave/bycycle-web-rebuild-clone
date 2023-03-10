@@ -45,7 +45,7 @@ export default function NewArrivalsSection({ }: Props) {
                                         <img src="/images/Polygon Cascade.png" alt="" />
                                     </div>
                                     <h3 className="product-name">polygon cascade</h3>
-                                    <span className="product-price">$3,900.00</span>
+                                    <span className="product-price">KES 400,900.00</span>
                                 </a>
                                 <button className="btn">add to cart</button>
                             </div>

@@ -14,7 +14,7 @@ export default function PopularSectionItem({ bike }: Props) {
                             <img src={bike.image} alt="" />
                         </div>
                         <h3 className="product-name">{bike.name}</h3>
-                        <span className="product-price">$3,900.00</span>
+                        <span className="product-price">KES 300,900.00</span>
                     </a>
                     <button className="btn">add to cart</button>
                 </div>

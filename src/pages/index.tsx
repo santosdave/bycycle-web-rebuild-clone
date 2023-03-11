@@ -16,13 +16,14 @@ export default function Home() {
   let [slideIndex, SetSlideIndex] = useState(0);
   let [slidePlay, SetSlidePlay] = useState(true);
 
+
   useEffect(() => {
     let hero_slide = document.querySelector('#hero-slide');
     let hero_slide_items = hero_slide?.querySelectorAll(".slide");
 
     let hero_slide_control_items = hero_slide?.querySelectorAll(".slide-control-item");
-    let slide_next = hero_slide?.querySelector(".slide-next");
-    let slide_prev = hero_slide?.querySelector(".slide-prev");
+    let slide_next = hero_slide!.querySelector("#slide-next");
+    let slide_prev = hero_slide!.querySelector("#slide-prev");
 
     let header = document.querySelector("header");
 
@@ -43,7 +44,8 @@ export default function Home() {
     }
 
     const nextSlide = () => {
-      slideIndex = slideIndex + 1 === hero_slide_items?.length ? 0 : slideIndex + 1;
+      console.log("Next SLide");
+      slideIndex = slideIndex + 1 === hero_slide_items!.length ? 0 : slideIndex + 1;
       showSlide(slideIndex);
     }
 
@@ -60,7 +62,6 @@ export default function Home() {
       });
     }
 
-
     // pause slide when mouse come in slider
     hero_slide?.addEventListener("mouseover", () => (slidePlay = false));
 
@@ -76,8 +77,8 @@ export default function Home() {
     }
 
 
-    if (hero_slide_items != undefined) {
-      setTimeout(() => hero_slide_items[0].classList.add("active"), 200);
+    if (hero_slide_items) {
+      setTimeout(() => hero_slide_items![0].classList.add("active"), 200);
     }
 
     // change header style when scroll
@@ -142,7 +143,7 @@ export default function Home() {
         <link rel="icon" href="/bike.png" />
       </Head>
       <Header />
-      <Hero />
+      <Hero  />
       <CategorySection/>
       <NewArrivalsSection/>
       <SpecialBike/>

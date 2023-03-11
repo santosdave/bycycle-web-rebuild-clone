@@ -33,14 +33,14 @@ export default function Hero({ }: Props) {
             <div className="hero-txt">you ride</div>
 
             <ul className="slide-control">
-                <li className="slide-prev">
+                <li className="slide-prev" id='slide-prev'>
                    <ArrowCircleLeftIcon className='w-9 h-9 text-gray-200' />
                 </li>
                 <li className="slide-control-item active">01</li>
                 <li className="slide-control-item">02</li>
                 <li className="slide-control-item">03</li>
-                <li className="slide-next">
-                   <ArrowCircleRightIcon className='w-9 h-9 text-gray-200'/>
+                <li className="slide-next" id='slide-next'>
+                   <ArrowCircleRightIcon className='w-9 h-9 text-gray-200 '/>
                 </li>
             </ul>
         </div>
